@@ -1,6 +1,7 @@
 Deface::Override.new(:virtual_path => "spree/admin/promotions/rules/_product",
                      :name => "product_groups_for_promo_product_rule",
                      :insert_before => ".products_rule_products",
+                     :disabled => true,
                      :text => %q{
 <p class="field products_rule_products_source_field">
   <label><%= radio_button_tag "#{param_prefix}[products_source]", :manual, promotion_rule.product_group.nil? %> <%= t "product_rule.product_source.manual" %></label> &nbsp;
